@@ -2,7 +2,7 @@
  * Created by admin on 2017/6/15.
  */
 import React from 'react';
-import  ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
 import ComponentMain from './components/mainContent';
@@ -13,7 +13,7 @@ class Index extends React.Component{
         return(
             <div>
                 <ComponentHeader/>
-                <ComponentMain/>
+                <ComponentMain userId={12356}/>
                 <ComponentFooter/>
             </div>
 

@@ -2,6 +2,7 @@
  * Created by admin on 2017/6/15.
  */
 import React from 'react';
+import BodyChild from './mainChild'
 
 export default class ComponentMain extends React.Component{
     constructor(){
@@ -10,26 +11,30 @@ export default class ComponentMain extends React.Component{
             userName:"parry"
         };
     }
-    render(){
-        var userName="Parry";
-        var boolen=true;
-        var html="1"
-        var waa="2";
-        var that=this;
-        function changeState(){
-            that.setState({
-                userName:"hello"
-            })
-        }
+    handleChildValue(event){
+        console.log(event.target.className)
+        this.setState({
+            userName:event.target.className
+        })
+    }
 
+    changeState(){
+        this.setState({
+            userName:"hello"
+        })
+    }
+    render(){
         return(
             <div>
                 <h1>主要内容</h1>
                 <p>{this.state.userName==""?"用户":this.state.userName}</p>
-                <button  onClick={changeState}>哈哈</button>
-                <p>{html}</p>{/*需要unicode转码*/}
-                <p dangerouslySetInnerHTML={{__html:html}}></p>
+                <button  onClick={this.changeState.bind(this)}>哈哈</button>
+                <p>{this.props.userId}</p>
+                <BodyChild handleChildValue={this.handleChildValue.bind(this)}/>
             </div>
         )
     }
+}
+ComponentMain.protoTypes={
+    userId:React.PropTypes.number.isRequired
 }
