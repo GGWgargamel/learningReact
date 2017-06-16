@@ -8,6 +8,7 @@ export default class bodyChild extends React.Component{
         return(
             <div>
                 <p onClick={this.props.handleChildValue} className="childs">子页面</p>
+                <h1>{this.props.userId}</h1>
             </div>
         )
     }

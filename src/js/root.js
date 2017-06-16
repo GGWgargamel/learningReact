@@ -13,7 +13,7 @@ class Index extends React.Component{
         return(
             <div>
                 <ComponentHeader/>
-                <ComponentMain userId={12356}/>
+                <ComponentMain userId={12356} />
                 <ComponentFooter/>
             </div>
 

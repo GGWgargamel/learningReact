@@ -3,7 +3,9 @@
  */
 import React from 'react';
 import BodyChild from './mainChild'
-
+const defaultProps={
+    userName:"默认"
+}
 export default class ComponentMain extends React.Component{
     constructor(){
         super();
@@ -30,7 +32,8 @@ export default class ComponentMain extends React.Component{
                 <p>{this.state.userName==""?"用户":this.state.userName}</p>
                 <button  onClick={this.changeState.bind(this)}>哈哈</button>
                 <p>{this.props.userId}</p>
-                <BodyChild handleChildValue={this.handleChildValue.bind(this)}/>
+                <p>{this.props.userName}</p>
+                <BodyChild handleChildValue={this.handleChildValue.bind(this)} {...this.props}/>
             </div>
         )
     }
@@ -38,3 +41,4 @@ export default class ComponentMain extends React.Component{
 ComponentMain.protoTypes={
     userId:React.PropTypes.number.isRequired
 }
+ComponentMain.defaultProps=defaultProps;
