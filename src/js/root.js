@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
 import ComponentMain from './components/mainContent';
