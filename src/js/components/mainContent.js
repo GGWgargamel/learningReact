@@ -2,7 +2,10 @@
  * Created by admin on 2017/6/15.
  */
 import React from 'react';
-import BodyChild from './mainChild'
+import ReactMixin from 'react-mixin';
+import BodyChild from './mainChild';
+import MixinLog from '../mixins/mixins'
+
 const defaultProps={
     userName:"默认"
 }
@@ -21,6 +24,7 @@ export default class ComponentMain extends React.Component{
     }
 
     changeState(){
+        MixinLog.log()
         this.setState({
             userName:"hello"
         })
@@ -40,5 +44,8 @@ export default class ComponentMain extends React.Component{
 }
 ComponentMain.protoTypes={
     userId:React.PropTypes.number.isRequired
-}
+};
+
 ComponentMain.defaultProps=defaultProps;
+
+ReactMixin(ComponentMain.prototype,MixinLog);

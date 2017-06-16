@@ -10,6 +10,7 @@ export default class bodyChild extends React.Component{
         ReactDOM.findDOMNode(h1).style.color="red"
         console.log(this.refs.h1);
         this.refs.h1.style.fontSize="70px";
+        MixinLog.log();
     }
     render(){
         return(
@@ -20,3 +21,4 @@ export default class bodyChild extends React.Component{
         )
     }
 }
+
