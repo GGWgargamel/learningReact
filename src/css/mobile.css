@@ -1,0 +1,21 @@
+html{
+    font-size: 50px;
+}
+#mobile{
+    flex: 1;
+    background: #f7f7f7;
+}
+#mobile header{
+    padding-left: 10px;
+    border-bottom: 1px solid #2db7f5;
+}
+#mobile header img{
+    width: 50px;
+    height: 50px;
+}
+#mobile header span{
+    font-size: 35px;
+    vertical-align: top;
+    padding-left: 10px;
+    color: #2db7f5;
+}
