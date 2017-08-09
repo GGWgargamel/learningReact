@@ -11,7 +11,7 @@ export default class pc_detail extends React.Component{
             newsItem:""
         };
     };
-    componentdDidMount(){
+    componentDidMount(){
         var myFetchOptions={
             method:"GET"
         };
@@ -22,7 +22,7 @@ export default class pc_detail extends React.Component{
 
     }
     createMarkup(){
-        return {__htnk:this.state.newsItem.pagecontent}
+        return {__html:this.state.newsItem.pagecontent}
     };
     render(){
         return(
