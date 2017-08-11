@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import {Row,Col} from 'antd';
+import Comment from './comment'
 
 export default class pc_detail extends React.Component{
     constructor(){
@@ -37,6 +38,7 @@ export default class pc_detail extends React.Component{
                     <Col span={6}></Col>
                     <Col span={2}></Col>
                 </Row>
+                <Comment uniquekey={this.props.params.uniquekey}/>
             </div>
         )
     }

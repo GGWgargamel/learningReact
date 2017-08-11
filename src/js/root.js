@@ -4,6 +4,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './components/pcIndex';
+import PCuserCenter from './components/pcUserCenter'
 import MIndex from './components/mIndex';
 import PCnewsDetail from './components/pc_detail';
 import 'antd/dist/antd.css';
@@ -21,11 +22,17 @@ export default class Root extends React.Component{
                         <div>
                             <Route path="/" component={Index}></Route>
                             <Route path="/details/:uniquekey" component={PCnewsDetail}></Route>
+                            <Route path="/user" component={PCuserCenter}></Route>
                         </div>
                     </Router>
                 </MediaQuery>
                 <MediaQuery query='(max-device-width:1224px)'>
-                    <MIndex/>
+                    <Router history={hashHistory}>
+                        <div>
+                            <Route path="/" component={MIndex}></Route>
+                            <Route path="/details/:uniquekey" component={PCnewsDetail}></Route>
+                        </div>
+                    </Router>
                 </MediaQuery>
             </div>
         )

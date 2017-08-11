@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import {Row,Col,Menu,Icon,Form,Input,Button,message,Modal,Tabs,Checkbox} from 'antd';
+import {Router, Route, Link, browserHistory} from 'react-router'
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup =Menu.ItemGroup;
 const FormItem=Form.Item;
@@ -109,7 +110,7 @@ class pc_Header extends React.Component{
         <Menu.Item key="logout" className="register">
             <Button type="primary" htmlType="button">{this.state.userName}</Button>
             <Button type="dashed" htmlType="button">
-                <Button>个人中心</Button>
+                <Link target="_blank" to={`user`}><Button>个人中心</Button></Link>
             </Button>
             <Button type="ghost" htmlType="button" onClick={this.logout.bind(this)}>退出</Button>
 
